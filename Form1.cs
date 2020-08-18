@@ -15,7 +15,7 @@ namespace filencry
     {
         public  byte[] data;
         private string rsaEncrypted;
-        private string original0;
+        private string original0= "我是一片云，天空是我家，朝迎旭日升，暮送夕阳下。";
         private string rsaDecrypted;
 
         public Form1()
@@ -48,13 +48,6 @@ namespace filencry
                 MessageBox.Show("没有解密密钥");
             }
             textBox1.Text = text;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string[] key1 = RSA.GenerateKeys();
-            MessageBox.Show(key1[1]);
-          
         }
 
         private void RSAE_Click(object sender, EventArgs e)
@@ -122,7 +115,7 @@ namespace filencry
                 return;
             }
 
-            string password = "123";
+            string password = "";
             string privateKeyXml = RsaHelper.PrivateKeyXmlFromPKCS12(priKeyFile, password);
 
             if (privateKeyXml == null)

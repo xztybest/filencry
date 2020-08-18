@@ -33,7 +33,6 @@
             this.text1 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.RSAGENERAL = new System.Windows.Forms.Button();
             this.RSAE = new System.Windows.Forms.Button();
             this.RSAD = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,16 +78,6 @@
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 4;
             // 
-            // RSAGENERAL
-            // 
-            this.RSAGENERAL.Location = new System.Drawing.Point(493, 44);
-            this.RSAGENERAL.Name = "RSAGENERAL";
-            this.RSAGENERAL.Size = new System.Drawing.Size(75, 23);
-            this.RSAGENERAL.TabIndex = 5;
-            this.RSAGENERAL.Text = "RSA信息生成";
-            this.RSAGENERAL.UseVisualStyleBackColor = true;
-            this.RSAGENERAL.Click += new System.EventHandler(this.button1_Click);
-            // 
             // RSAE
             // 
             this.RSAE.Location = new System.Drawing.Point(171, 242);
@@ -116,7 +105,6 @@
             this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.RSAD);
             this.Controls.Add(this.RSAE);
-            this.Controls.Add(this.RSAGENERAL);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.text1);
@@ -135,7 +123,6 @@
         private System.Windows.Forms.TextBox text1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button RSAGENERAL;
         private System.Windows.Forms.Button RSAE;
         private System.Windows.Forms.Button RSAD;
     }

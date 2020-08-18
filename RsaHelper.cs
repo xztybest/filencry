@@ -83,7 +83,7 @@ namespace filencry
             //string xmlPrivateKey = "<RSAKeyValue><Modulus>q/Yb0j6iQiF1Pu0b1+7/13Fz9iMaepwXmEXQScZbuVdf9VBQ50j5+gj5a+E7FuxQxHcSv86Hn2TCZY/pBOHlNwh/736zhMoqfacfjEtRbplKG2q9WvywUnQsrGzkFnL3OmG5YpvW2EmXh2cOFNtGroibSfWkWI9sNjCo++/gmJE=</Modulus> <Exponent>AQAB</Exponent> <P>2bO1ztOmt1hn3Nl0O8Z8+F7KAe+xp5wJXBPuKs5wUypoGO52JGqW5U1003VsEQjXaJdGX3NJBK9Bb5ZD4zucWw==</P> <Q>yjZzxrDH45vhz77LwCcg+GbnV59WFewD8woQ8wGerS+2IpksBoSbtvsB2qhA7QAbIgroAkd9q5lK1bKeQaqigw==</Q> <DP>C3eH0Akd8vJZJizeDnf6BSsZANkbRnTVmWADX4XYLMlDCm0lE+35XMKjsK+yrYMFtaCiOEzeP7zreXE0yjdNmQ==</DP> <DQ>rS2rQ8vctQqofqHZn6wjKXn/wOQd9tJVo4zIbUXC3nGRG9pwgPiK30/jC5+zUwYXNrV+c41EjHTRSWka7gQz/w==</DQ> <InverseQ>QiprMadsDyt3w6CnO9xoJKaxH7xGsJkbLcqtlleJP4SfNB2XqRcT49ryoPGdVUWqbeGprxtkTqezPTXMJyIDQQ==</InverseQ> <D>b4cyKhzXTb63dTWBLn5izk9V31iLDuR35Rm6am7NBJsnsEoD/s1023bAlfhBQ6/G/nUf4ujHS1ilQAujHLiJ2SRAg1imYmQCapnc8GA5I5Z4MvarrfAzZQ0QxNSZ7+6k+SHIeMCBbRHHStg3i5WROYER9JHtFd+8GLOA45mi31U=</D> </RSAKeyValue>";
 
             string xmlPublicKey = PublicKeyXmlFromCer("H:\\CA\\root-cert.cer", "");
-            string xmlPrivateKey = PrivateKeyXmlFromPKCS12("H:\\CA\\root.p12", "123");
+            string xmlPrivateKey = PrivateKeyXmlFromPKCS12("H:\\CA\\root.p12", "");
 
             string encrypted = RsaHelper.Encrypt(original0, xmlPublicKey);
             string decrypted = RsaHelper.Decrypt(encrypted, xmlPrivateKey);
