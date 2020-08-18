@@ -34,6 +34,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.RSAGENERAL = new System.Windows.Forms.Button();
+            this.RSAE = new System.Windows.Forms.Button();
+            this.RSAD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AESE
@@ -79,7 +81,7 @@
             // 
             // RSAGENERAL
             // 
-            this.RSAGENERAL.Location = new System.Drawing.Point(281, 250);
+            this.RSAGENERAL.Location = new System.Drawing.Point(493, 44);
             this.RSAGENERAL.Name = "RSAGENERAL";
             this.RSAGENERAL.Size = new System.Drawing.Size(75, 23);
             this.RSAGENERAL.TabIndex = 5;
@@ -87,11 +89,33 @@
             this.RSAGENERAL.UseVisualStyleBackColor = true;
             this.RSAGENERAL.Click += new System.EventHandler(this.button1_Click);
             // 
+            // RSAE
+            // 
+            this.RSAE.Location = new System.Drawing.Point(171, 242);
+            this.RSAE.Name = "RSAE";
+            this.RSAE.Size = new System.Drawing.Size(75, 23);
+            this.RSAE.TabIndex = 6;
+            this.RSAE.Text = "RSA加密";
+            this.RSAE.UseVisualStyleBackColor = true;
+            this.RSAE.Click += new System.EventHandler(this.RSAE_Click);
+            // 
+            // RSAD
+            // 
+            this.RSAD.Location = new System.Drawing.Point(371, 242);
+            this.RSAD.Name = "RSAD";
+            this.RSAD.Size = new System.Drawing.Size(75, 23);
+            this.RSAD.TabIndex = 7;
+            this.RSAD.Text = "RSA解密";
+            this.RSAD.UseVisualStyleBackColor = true;
+            this.RSAD.Click += new System.EventHandler(this.RSAD_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 450);
+            this.Controls.Add(this.RSAD);
+            this.Controls.Add(this.RSAE);
             this.Controls.Add(this.RSAGENERAL);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -112,6 +136,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button RSAGENERAL;
+        private System.Windows.Forms.Button RSAE;
+        private System.Windows.Forms.Button RSAD;
     }
 }
 
