@@ -35,6 +35,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.RSAE = new System.Windows.Forms.Button();
             this.RSAD = new System.Windows.Forms.Button();
+            this.exchatest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AESE
@@ -49,7 +50,7 @@
             // 
             // AESD
             // 
-            this.AESD.Location = new System.Drawing.Point(346, 44);
+            this.AESD.Location = new System.Drawing.Point(242, 44);
             this.AESD.Name = "AESD";
             this.AESD.Size = new System.Drawing.Size(75, 23);
             this.AESD.TabIndex = 1;
@@ -80,7 +81,7 @@
             // 
             // RSAE
             // 
-            this.RSAE.Location = new System.Drawing.Point(171, 242);
+            this.RSAE.Location = new System.Drawing.Point(389, 44);
             this.RSAE.Name = "RSAE";
             this.RSAE.Size = new System.Drawing.Size(75, 23);
             this.RSAE.TabIndex = 6;
@@ -90,7 +91,7 @@
             // 
             // RSAD
             // 
-            this.RSAD.Location = new System.Drawing.Point(371, 242);
+            this.RSAD.Location = new System.Drawing.Point(515, 44);
             this.RSAD.Name = "RSAD";
             this.RSAD.Size = new System.Drawing.Size(75, 23);
             this.RSAD.TabIndex = 7;
@@ -98,11 +99,22 @@
             this.RSAD.UseVisualStyleBackColor = true;
             this.RSAD.Click += new System.EventHandler(this.RSAD_Click);
             // 
+            // exchatest
+            // 
+            this.exchatest.Location = new System.Drawing.Point(298, 262);
+            this.exchatest.Name = "exchatest";
+            this.exchatest.Size = new System.Drawing.Size(75, 23);
+            this.exchatest.TabIndex = 8;
+            this.exchatest.Text = "密钥交换";
+            this.exchatest.UseVisualStyleBackColor = true;
+            this.exchatest.Click += new System.EventHandler(this.exchatest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 450);
+            this.Controls.Add(this.exchatest);
             this.Controls.Add(this.RSAD);
             this.Controls.Add(this.RSAE);
             this.Controls.Add(this.textBox2);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button RSAE;
         private System.Windows.Forms.Button RSAD;
+        private System.Windows.Forms.Button exchatest;
     }
 }
 
