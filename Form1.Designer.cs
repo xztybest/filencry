@@ -1,4 +1,7 @@
-﻿namespace filencry
+﻿using System;
+using System.Runtime.CompilerServices;
+
+namespace filencry
 {
     partial class Form1
     {
@@ -36,6 +39,8 @@
             this.RSAE = new System.Windows.Forms.Button();
             this.RSAD = new System.Windows.Forms.Button();
             this.exchatest = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.methodget = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AESE
@@ -109,11 +114,30 @@
             this.exchatest.UseVisualStyleBackColor = true;
             this.exchatest.Click += new System.EventHandler(this.exchatest_Click);
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(345, 186);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.TabIndex = 9;
+            // 
+            // methodget
+            // 
+            this.methodget.Location = new System.Drawing.Point(515, 118);
+            this.methodget.Name = "methodget";
+            this.methodget.Size = new System.Drawing.Size(75, 23);
+            this.methodget.TabIndex = 10;
+            this.methodget.Text = "事件绑定";
+            this.methodget.UseVisualStyleBackColor = true;
+            this.methodget.Click += new System.EventHandler(this.AESEncry2("123"));
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 450);
+            this.Controls.Add(this.methodget);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.exchatest);
             this.Controls.Add(this.RSAD);
             this.Controls.Add(this.RSAE);
@@ -138,6 +162,9 @@
         private System.Windows.Forms.Button RSAE;
         private System.Windows.Forms.Button RSAD;
         private System.Windows.Forms.Button exchatest;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button methodget;
     }
+    
 }
 

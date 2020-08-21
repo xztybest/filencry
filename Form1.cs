@@ -16,7 +16,7 @@ namespace filencry
     {
         public  byte[] data;
         private string rsaEncrypted;
-        private string original0= "我是一片云，天空是我家，朝迎旭日升，暮送夕阳下。";
+        private string original0 = "123456";
         private string rsaDecrypted;
 
         public Form1()
@@ -26,13 +26,17 @@ namespace filencry
 
         private void AESE_Click(object sender, EventArgs e)
         {
-            string plain = "我就是我";
-            byte[] pl2= System.Text.Encoding.UTF8.GetBytes(plain);
-            string pwd = "mmb";
-            byte[] cipher = AES.AESHelper.Encrypt(pl2, pwd);
+            string txt1 = "123";
+            string passwd = "123456";
+            byte[] test = funcsum.AESEncry(txt1, passwd);
+            MessageBox.Show(System.Text.Encoding.UTF8.GetString(test));
+            string plain = "我就是我";//需要加密的内容
+            byte[] pl2= System.Text.Encoding.UTF8.GetBytes(plain);//转bit内容
+            string pwd = "mmb";//加密密码
+            byte[] cipher = AES.AESHelper.Encrypt(pl2, pwd);//加密操作
 
-            byte[] dec = AES.AESHelper.Decrypt(cipher, pwd);
-            string text = System.Text.Encoding.UTF8.GetString(dec);
+            byte[] dec = AES.AESHelper.Decrypt(cipher, pwd);//解密操作，转bit内容
+            string text = System.Text.Encoding.UTF8.GetString(dec);//转字符串内容，方便查看
             data = cipher;
             text1.Text = pwd;
             string entext1 = System.Text.Encoding.UTF8.GetString(cipher);
@@ -72,8 +76,9 @@ namespace filencry
                 MessageBox.Show("未能取得公钥信息！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            string text2 = textBox3.Text;
 
-            rsaEncrypted = RsaHelper.Encrypt(original0, publicKeyXml);
+            rsaEncrypted = RsaHelper.Encrypt(text2, publicKeyXml);
 
             if (rsaEncrypted == null)
                 MessageBox.Show("RSA加密失败！");
@@ -192,11 +197,18 @@ namespace filencry
 
             if (Alice_Cal.ToString() == Bob_Cal.ToString())
             {
-                MessageBox.Show("Alice、Bob完成了一次密钥交换。");
+                MessageBox.Show(Bob_Cal.ToString());
             }
         }
 
+        public void AESEncry2(object sender, EventArgs e,string xx)
+        {
+            MessageBox.Show("helloworld");
+            MessageBox.Show(xx);
 
-        
+        }
+
+
+
     }
 }
