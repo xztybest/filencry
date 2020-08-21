@@ -16,7 +16,7 @@ namespace filencry
             return message;
         }
 
-        public static void AESEncry2()
+        public  void AESEncry2()
         {
             MessageBox.Show("helloworld");
         }
